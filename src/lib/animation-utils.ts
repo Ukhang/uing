@@ -123,7 +123,7 @@ export const parallaxScroll = (yOffset: number) => ({
 // Magnetic effect utils
 export const calculateMagneticPosition = (
   e: React.MouseEvent,
-  ref: React.RefObject<HTMLElement>,
+  ref: React.RefObject<HTMLButtonElement | null>,
   strength: number = 25
 ) => {
   if (!ref.current) return { x: 0, y: 0 };
