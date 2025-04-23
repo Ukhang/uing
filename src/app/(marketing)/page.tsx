@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import MacModalSection from "./components/macmodal-section";
+import MagneticButtonSection from "./components/magneticbutton-section";
 
 export default function Home() {
   return (
@@ -34,6 +35,7 @@ export default function Home() {
         </div>
       </section>
 
+      <MagneticButtonSection/>
       <MacModalSection />
     </div>
   );
