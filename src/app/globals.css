@@ -136,11 +136,11 @@
     background-color: #111110;
   }
 
-  .text-primary-foreground {
+  .text-custom-primary {
     color: #21201C;
   }
 
-  .dark .text-primary-foreground {
+  .dark .text-custom-primary {
     color: #FFFFFF;
   }
 }
