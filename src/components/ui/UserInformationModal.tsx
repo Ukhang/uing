@@ -38,7 +38,8 @@ const UserInformationModal = () => {
         </div>
         <div className="bg-gray-100/80 dark:bg-[#171717]/80 p-4 py-14 text-[#111110] dark:text-[#FFFFFF]">
           <div className="max-w-lg w-full mx-auto">
-            <div className="flex items-center justify-center gap-12">
+            <div className="flex md:flex-row flex-col items-center justify-center gap-6 md:gap-12">
+              {" "}
               <Image
                 src={"/kite.png"}
                 alt="Kite Tyler"
