@@ -17,9 +17,9 @@ export const softSpringTransition = {
 
 export const quickSpringTransition = {
   type: 'spring',
-  stiffness: 400,
-  damping: 30,
-  mass: 0.8,
+  stiffness: 800,
+  damping: 20,
+  mass: 0.3,
 };
 
 // Easing functions

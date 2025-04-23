@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { MagneticButton } from "../animations/MagneticButton";
+import { Button } from "../animations/MagneticButton";
 import { ModalTransition } from "../animations/ModalTransition";
 import Image from "next/image";
 import { X } from "lucide-react";
@@ -11,13 +11,15 @@ const UserInformationModal = () => {
 
   return (
     <>
-      <MagneticButton
+      <Button
         variant="outline"
         onClick={() => setOpen(true)}
         className="cursor-pointer"
+        magnetic
+        size={"sm"}
       >
-        show modal
-      </MagneticButton>
+        View Profile
+      </Button>
       <ModalTransition
         isOpen={open}
         onClose={() => setOpen(false)}

@@ -5,7 +5,7 @@ import { ModalTransition } from "../animations/ModalTransition";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { X } from "lucide-react";
-import { MagneticButton } from "../animations/MagneticButton";
+import { Button } from "../animations/MagneticButton";
 
 const SystemInformationModal = () => {
   const [open, setOpen] = useState(false);
@@ -13,13 +13,15 @@ const SystemInformationModal = () => {
 
   return (
     <>
-      <MagneticButton
+      <Button
         variant="outline"
         onClick={() => setOpen(true)}
         className="cursor-pointer"
+        magnetic
+        size={"sm"}
       >
-        show modal
-      </MagneticButton>
+        View system Info
+      </Button>
       <ModalTransition
         isOpen={open}
         onClose={() => setOpen(false)}
