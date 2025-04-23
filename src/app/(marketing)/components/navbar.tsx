@@ -6,7 +6,7 @@ import { Github } from "lucide-react";
 
 const Navbar = () => {
   const handleGitHubRedirect = () => {
-    window.open("https://github.com/Ukhang/uiang", "_blank", "noopener noreferrer");
+    window.open("https://github.com/Ukhang/uing", "_blank", "noopener noreferrer");
   };
 
   return (
