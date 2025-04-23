@@ -51,7 +51,8 @@ export function ModalTransition({
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/15"
+        className="fixed inset-0 z-50 flex items-center justify-center bg-black/15 dark:bg-black/50"
+
           initial="hidden"
           animate="visible"
           exit="exit"
