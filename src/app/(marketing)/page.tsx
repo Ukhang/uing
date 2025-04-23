@@ -26,7 +26,7 @@ export default function Home() {
           <div className="text-sm">
             <span className="text-muted-foreground">by</span>{" "}
             <Link
-              href="https://ukhangmarma.vercel.app"
+              href="https://x.com/UkhangM45926"
               target="_blank"
               className="text-custom-primary"
             >
