@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import { Button } from "../animations/MagneticButton";
-import { ModalTransition } from "../animations/ModalTransition";
+import { Button } from "../animations/magnetic-button";
+import { ModalTransition } from "../animations/modal-transition";
 import Image from "next/image";
 import { X } from "lucide-react";
 

@@ -1,11 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
-import { ModalTransition } from "../animations/ModalTransition";
+import { ModalTransition } from "../animations/modal-transition";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { X } from "lucide-react";
-import { Button } from "../animations/MagneticButton";
+import { Button } from "../animations/magnetic-button";
 
 const SystemInformationModal = () => {
   const [open, setOpen] = useState(false);
