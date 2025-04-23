@@ -62,7 +62,7 @@ export function TextReveal({
   return (
     <motion.div
       ref={ref}
-      className={cn('flex flex-wrap justify-center min-w-full p-4', className)}
+      className={cn('flex flex-wrap justify-center min-w-full', className)}
       variants={container}
       initial="hidden"
       animate={isInView ? 'visible' : 'hidden'}
