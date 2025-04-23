@@ -4,7 +4,17 @@ import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata: Metadata = {
   title: "uiang",
-  description: "Copy and use beautiful web UI animations Instantly",
+  description: "Copy and use beautiful web UI animations instantly. Fluid, natural animations with Framer Motion and Tailwind CSS for exceptional user experiences.",
+  keywords: [
+    "UI animations",
+    "Framer Motion",
+    "Tailwind CSS",
+    "web animation",
+    "react animations",
+    "copy animations",
+    "uiang"
+  ],
+  authors: [{ name: "uiang" }],
   icons: {
     icon: "/logo.svg"
   }
