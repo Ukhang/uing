@@ -5,7 +5,7 @@
 </p>
 
 # uing
-Copy and use beautiful React components with web UI animations — built with [Next.js](https://nextjs.org), [React](https://react.dev), [TypeScript](https://www.typescriptlang.org), [TailwindCSS](https://tailwindcss.com), and [Framer Motion](https://www.framer.com/motion/).
+Copy and use beautifully animated React components built with [Next.js](https://nextjs.org), [React](https://react.dev), [TypeScript](https://www.typescriptlang.org), [TailwindCSS](https://tailwindcss.com), and [Framer Motion](https://www.framer.com/motion/).
 
 ### Inspiration
 

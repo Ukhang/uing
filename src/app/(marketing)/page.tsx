@@ -9,7 +9,7 @@ export default function Home() {
     <div className="max-w-2xl lg:max-w-3xl w-full mx-auto">
       <section className="flex flex-col gap-4 px-4">
         <h1 className="text-xl leading-normal md:text-2xl md:leading-[52px] text-custom-foreground md:mt-[80px] lg:mt-[150px] mt-18 text-left justify-start font-medium text-custom-primary">
-          Copy and Use Beautiful Web UI Animations Instantly :)
+          Copy and use beautifully animated React components :)
         </h1>
         <p className="text-custom-primary max-w-[480px] text-base w-full">
           Fluid, natural animations with Framer Motion and Tailwind CSS for
@@ -36,11 +36,9 @@ export default function Home() {
         </div>
       </section>
 
-      <MagneticButtonSection/>
+      <MagneticButtonSection />
       <MacModalSection />
-      <TextRevealSection/>
-
-      
+      <TextRevealSection />
     </div>
   );
 }
