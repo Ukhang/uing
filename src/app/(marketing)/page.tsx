@@ -1,10 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
+import MacModalSection from "./components/macmodal-section";
 
 export default function Home() {
   return (
-    <div className="px-4 max-w-2xl lg:max-w-3xl w-full mx-auto">
-      <div className="z-10 flex flex-col gap-4">
+    <div className="max-w-2xl lg:max-w-3xl w-full mx-auto">
+      <section className="flex flex-col gap-4 px-4">
         <h1 className="text-xl leading-normal md:text-2xl md:leading-[52px] text-custom-foreground md:mt-[80px] lg:mt-[150px] mt-18 text-left justify-start font-medium text-custom-primary">
           Copy and Use Beautiful Web UI Animations Instantly :)
         </h1>
@@ -21,13 +22,19 @@ export default function Home() {
             className="rounded-full"
           />
           <div className="text-sm">
-           <span className="text-muted-foreground">by</span>{" "}
-            <Link href="https://ukhangmarma.vercel.app" target="_blank" className="text-custom-primary">
+            <span className="text-muted-foreground">by</span>{" "}
+            <Link
+              href="https://ukhangmarma.vercel.app"
+              target="_blank"
+              className="text-custom-primary"
+            >
               Ukhang Marma
             </Link>
           </div>
         </div>
-      </div>
+      </section>
+
+      <MacModalSection />
     </div>
   );
 }

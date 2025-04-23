@@ -143,4 +143,12 @@
   .dark .text-custom-primary {
     color: #FFFFFF;
   }
+
+  .text-custom-muted {
+    color: #373632;
+  }
+
+  .dark .text-custom-muted {
+    color: #CDCDC6;
+  }
 }
