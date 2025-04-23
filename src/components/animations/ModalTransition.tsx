@@ -60,10 +60,9 @@ export function ModalTransition({
           onClick={onClose}
         >
           <motion.div
-            layout
-            layoutId="modal-content"
+            layout="position"
             className={cn(
-              "relative bg-white dark:bg-gray-900 rounded-xl shadow-sm overflow-hidden max-w-md w-full mx-4 border",
+              "relative bg-white dark:bg-gray-900 rounded-xl shadow-sm overflow-hidden max-w-md w-full m-2 sm:m-4 border",
               className
             )}
             initial="hidden"
