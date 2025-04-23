@@ -25,7 +25,9 @@ const SystemInformationModal = () => {
         onClose={() => setOpen(false)}
         className="bg-none backdrop-blur-sm max-w-xl w-full"
       >
-        <div className="border-b-1 border-gray-300 dark:border-gray-600 px-4 py-2 bg-white dark:bg-[#2F2F2F]">          <div className="flex items-center justify-between gap-4">
+        <div className="border-b-1 border-gray-300 dark:border-gray-600 px-4 py-2 bg-white dark:bg-[#2F2F2F]">
+          {" "}
+          <div className="flex items-center justify-between gap-4">
             <button
               className="bg-red-400 rounded-full w-3.5 h-3.5 flex items-center justify-center group text-gray-800 shadow-sm transition-all duration-200"
               onClick={() => setOpen(false)}
@@ -41,7 +43,8 @@ const SystemInformationModal = () => {
                   key={item}
                   className={cn(
                     "px-2 py-1 focus:outline-1 focus:rounded-[3px]",
-                    panel === item && "bg-gray-200 dark:bg-[#222121] rounded-[3px]"
+                    panel === item &&
+                      "bg-gray-200 dark:bg-[#222121] rounded-[3px]"
                   )}
                   onClick={() => setPanel(item)}
                 >
@@ -53,17 +56,19 @@ const SystemInformationModal = () => {
           </div>
         </div>
 
-        <div className="bg-gray-100/80 dark:bg-[#171717]/80 p-4 py-14 text-[#111110] dark:text-[#FFFFFF]">          {panel === "overview" && (
+        <div className="bg-gray-100/80 dark:bg-[#171717]/80 p-4 py-14 text-[#111110] dark:text-[#FFFFFF]">
+          {" "}
+          {panel === "overview" && (
             <div className="max-w-lg w-full mx-auto">
-              <div className="flex items-center justify-center gap-12">
+              <div className="flex md:flex-row flex-col items-center justify-center gap-6 md:gap-12">
                 <Image
                   src={"/arch-linux.png"}
                   alt="Arch Linux"
-                  width={150}
-                  height={150}
+                  width={170}
+                  height={170}
                 />
                 <div>
-                  <h4 className="text-3xl">
+                  <h4 className="text-2xl md:text-3xl">
                     <span className="font-semibold">Arch</span> Linux
                   </h4>
                   <span className="text-xs">Version: 5.0.0</span>
@@ -99,18 +104,17 @@ const SystemInformationModal = () => {
               </div>
             </div>
           )}
-
           {panel === "display" && (
             <div className="max-w-lg w-full mx-auto">
-              <div className="flex flex-col items-center justify-center gap-12">
-                <Image
-                  src={"/thinkped.png"}
-                  alt="Thinkped"
+              <div className="flex flex-col items-center justify-center gap-6 md:gap-12">
+              <Image
+                  src={"/pc.png"}
+                  alt="pc"
                   width={200}
                   height={200}
                 />
                 <div className="text-center">
-                  <h4 className="text-3xl text-center">
+                  <h4 className="text-2xl md:text-3xl text-center">
                     <span className="font-semibold">Display</span>
                   </h4>
                   <div className="mt-2 text-xs space-y-1">
@@ -120,11 +124,10 @@ const SystemInformationModal = () => {
               </div>
             </div>
           )}
-
           {panel === "storage" && (
             <div className="max-w-lg w-full mx-auto">
-              <div className="flex items-start justify-center gap-12">
-                <Image
+              <div className="flex md:flex-row flex-col md:items-start items-center justify-center gap-6 md:gap-12">
+              <Image
                   src={"/hard-drive.png"}
                   alt="hard drive"
                   width={100}
@@ -132,7 +135,7 @@ const SystemInformationModal = () => {
                   className=""
                 />
                 <div className="text-xs">
-                  <h4 className="text-3xl">
+                  <h4 className="text-2xl md:text-3xl">
                     <span className="font-semibold">Storage</span>
                   </h4>
                   <div className="mt-2 space-y-0.5">

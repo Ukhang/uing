@@ -124,11 +124,18 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-[#FDFDFC] dark:bg-[#111110] text-foreground;
+    @apply bg-primary-foreground text-foreground;
   }
 }
 
 @layer utilities {
+  .bg-primary-foreground {
+    background-color: #FDFDFC;
+  }
+  .dark .bg-primary-foreground {
+    background-color: #111110;
+  }
+
   .text-primary-foreground {
     color: #21201C;
   }
