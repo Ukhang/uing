@@ -25,15 +25,17 @@ const MacModalSection = () => {
             the design aesthetics of MacBook system dialogs.
           </p>
         </div>
-        <Button
-          variant="secondary"
-          size="sm"
-          magnetic
-          className="cursor-pointer"
-          onClick={toggleTab}
-        >
-          {activeTab === "preview" ? "Code" : "Preview"}
-        </Button>
+        <div className="min-w-[60px] flex justify-end">
+          <Button
+            variant="secondary"
+            size="sm"
+            magnetic
+            className="cursor-pointer"
+            onClick={toggleTab}
+          >
+            {activeTab === "preview" ? "Code" : "Preview"}
+          </Button>
+        </div>
       </div>
 
       {activeTab === "preview" && (

@@ -13,25 +13,27 @@ const MagneticButtonSection = () => {
 
   return (
     <section className="mt-20 space-y-5">
-      <div className="flex items-start gap-4 px-4">
+      <div className="flex items-start justify-between gap-4 px-4">
         <div className="space-y-3">
           <h3 className="font-medium text-custom-primary tracking-wide text-lg">
             Magnetic Button
           </h3>
           <p className="text-custom-muted">
-            A dynamic, interactive button component that subtly &quot;attracts&quot; the
-            cursor or mouse pointer when hovered over.
+            A dynamic, interactive button component that subtly
+            &quot;attracts&quot; the cursor or mouse pointer when hovered over.
           </p>
         </div>
-        <Button
-          variant="secondary"
-          size="sm"
-          magnetic
-          className="cursor-pointer"
-          onClick={toggleTab}
-        >
-          {activeTab === "preview" ? "Code" : "Preview"}
-        </Button>
+        <div className="min-w-[60px] flex justify-end">
+          <Button
+            variant="secondary"
+            size="sm"
+            magnetic
+            className="cursor-pointer"
+            onClick={toggleTab}
+          >
+            {activeTab === "preview" ? "Code" : "Preview"}
+          </Button>
+        </div>
       </div>
 
       {activeTab === "preview" && (
