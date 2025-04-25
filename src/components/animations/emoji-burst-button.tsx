@@ -71,7 +71,7 @@ const EmojiBurstButton = React.forwardRef<HTMLButtonElement, EmojiBurstButtonPro
 
     return (
       <div
-        className={cn("relative inline-flex", className)}
+        className={cn("relative", className)}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
@@ -79,7 +79,7 @@ const EmojiBurstButton = React.forwardRef<HTMLButtonElement, EmojiBurstButtonPro
           ref={ref}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
-          className={cn("outline-none", buttonClassName)}
+          className={cn("", buttonClassName)}
           {...(props as Omit<HTMLMotionProps<"button">, "onDrag">)}
           >
           <Image
@@ -92,7 +92,7 @@ const EmojiBurstButton = React.forwardRef<HTMLButtonElement, EmojiBurstButtonPro
 
         <AnimatePresence>
           {isHovered && (
-            <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2">
               {emojis.map((emoji, index) => (
                 <motion.span
                   key={index}
