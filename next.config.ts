@@ -18,6 +18,9 @@ const nextConfig: NextConfig = {
     });
     return config;
   },
+  images: {
+    domains: ['www.macworld.com'],
+  },
 };
 
 export default nextConfig;
