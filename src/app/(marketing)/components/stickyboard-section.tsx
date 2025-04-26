@@ -1,0 +1,58 @@
+"use client";
+
+import { useState } from "react";
+import Viewport from "@/components/ui/ViewPort";
+import { Button } from "@/components/animations/magnetic-button";
+import StickyBoard from "@/components/ui/sticky-board";
+
+const StickyBoardSection = () => {
+  const [activeTab, setActiveTab] = useState("preview");
+
+  const toggleTab = () => {
+    setActiveTab((prevTab) => (prevTab === "preview" ? "code" : "preview"));
+  };
+
+  return (
+    <section className="mt-20 space-y-5">
+      <div className="flex items-start justify-between gap-4 px-4">
+        <div className="space-y-3">
+          <h3 className="font-medium text-custom-primary tracking-wide text-lg">
+            Sticky Board
+          </h3>
+          <p className="text-custom-muted">
+            An interactive board where you can create, drag, edit, and delete colorful sticky notes — perfect for organizing ideas with a playful and intuitive experience.
+          </p>
+        </div>
+        <div className="min-w-[60px] flex justify-end">
+          <Button
+            variant="secondary"
+            size="sm"
+            magnetic
+            className="cursor-pointer"
+            onClick={toggleTab}
+          >
+            {activeTab === "preview" ? "Code" : "Preview"}
+          </Button>
+        </div>
+      </div>
+
+      {activeTab === "preview" && (
+        <div className="grid grid-cols-1 sm:px-4">
+          <Viewport>
+            <div className="flex flex-col items-center justify-center min-h-full">
+              <StickyBoard/>
+            </div>
+          </Viewport>
+        </div>
+      )}
+
+      {activeTab === "code" && (
+        <div className="px-4">
+          <p className="text-custom-muted">Code coming soon...</p>
+        </div>
+      )}
+    </section>
+  );
+};
+
+export default StickyBoardSection;
