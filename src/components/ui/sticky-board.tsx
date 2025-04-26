@@ -1,9 +1,9 @@
 "use client";
 
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { X, Plus } from 'lucide-react';
-import { Button } from '@/components/animations/magnetic-button';
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { X, Plus } from "lucide-react";
+import { Button } from "@/components/animations/magnetic-button";
 
 type Note = {
   id: number;
@@ -22,18 +22,25 @@ type StickyNoteProps = {
 
 const StickyBoard = () => {
   const [notes, setNotes] = useState<Note[]>([
-    { id: 1, text: 'Drag me around!', x: 50, y: 50, color: 'bg-yellow-200' },
-    { id: 2, text: 'Click to edit', x: 100, y: 130, color: 'bg-green-200' },
+    { id: 1, text: "Drag me around!", x: 50, y: 50, color: "bg-yellow-200 dark:bg-yellow-300" },
+    { id: 2, text: "Click to edit", x: 100, y: 130, color: "bg-green-200 dark:bg-green-300" },
   ]);
   const [nextId, setNextId] = useState<number>(3);
-  const colors = ['bg-yellow-200', 'bg-green-200', 'bg-blue-200', 'bg-pink-200', 'bg-purple-200'];
+  const colors = [
+    "bg-yellow-200 dark:bg-yellow-300",
+    "bg-green-200 dark:bg-green-300",
+    "bg-blue-200 dark:bg-blue-300",
+    "bg-pink-200 dark:bg-pink-300",
+    "bg-purple-200 dark:bg-purple-300",
+  ];
+  
 
   const addNote = () => {
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
     const newNote: Note = {
       id: nextId,
-      text: 'New note',
-      x: Math.random() * 100 + 50,
+      text: "New note",
+      x: Math.random() * 70 + 20,
       y: Math.random() * 100 + 50,
       color: randomColor,
     };
@@ -42,26 +49,24 @@ const StickyBoard = () => {
   };
 
   const deleteNote = (id: number) => {
-    setNotes(notes.filter(note => note.id !== id));
+    setNotes(notes.filter((note) => note.id !== id));
   };
 
   const updateNoteText = (id: number, newText: string) => {
-    setNotes(notes.map(note => 
-      note.id === id ? { ...note, text: newText } : note
-    ));
+    setNotes(
+      notes.map((note) => (note.id === id ? { ...note, text: newText } : note))
+    );
   };
 
   const updateNotePosition = (id: number, x: number, y: number) => {
-    setNotes(notes.map(note => 
-      note.id === id ? { ...note, x, y } : note
-    ));
+    setNotes(notes.map((note) => (note.id === id ? { ...note, x, y } : note)));
   };
 
   return (
-    <div className="w-full h-[500px] p-6 relative overflow-hidden">
+    <div className="w-full h-[420px] p-6 relative overflow-hidden">
       <Button
         onClick={addNote}
-        className='absolute bottom-4 mx-auto rounded-full'
+        className="absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full cursor-pointer"
         variant={"outline"}
         size={"icon"}
         magnetic
@@ -80,15 +85,23 @@ const StickyBoard = () => {
       ))}
     </div>
   );
-}
+};
 
 export default StickyBoard;
 
-function StickyNote({ note, updateText, updatePosition, onDelete }: StickyNoteProps) {
+function StickyNote({
+  note,
+  updateText,
+  updatePosition,
+  onDelete,
+}: StickyNoteProps) {
   const [isEditing, setIsEditing] = useState<boolean>(false);
   const [text, setText] = useState<string>(note.text);
 
-  const handleDragEnd = (_: unknown, info: { offset: { x: number; y: number } }) => {
+  const handleDragEnd = (
+    _: unknown,
+    info: { offset: { x: number; y: number } }
+  ) => {
     updatePosition(note.x + info.offset.x, note.y + info.offset.y);
   };
 
@@ -104,7 +117,7 @@ function StickyNote({ note, updateText, updatePosition, onDelete }: StickyNotePr
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
+    if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
       setIsEditing(false);
       updateText(text);
@@ -113,7 +126,7 @@ function StickyNote({ note, updateText, updatePosition, onDelete }: StickyNotePr
 
   return (
     <motion.div
-      className={`absolute shadow-lg rounded-md ${note.color} p-4 w-54 min-h-32 cursor-move flex flex-col text-sm`}
+      className={`absolute shadow-lg rounded-md ${note.color} p-4 w-54 min-h-32 cursor-move flex flex-col text-sm text-black`}
       style={{ x: note.x, y: note.y }}
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
