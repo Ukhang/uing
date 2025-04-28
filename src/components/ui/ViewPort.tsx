@@ -16,18 +16,15 @@ const Viewport: React.FC<ViewportProps> = ({ children, reload }) => {
     setReloadKey((prevKey) => prevKey + 1);
   };
 
-  const containerProps = {
-    className:
-      "border-y sm:border-x sm:border-y sm:rounded-xl p-4 min-h-[348px] bg-white dark:bg-[#0D0D0B] relative",
-    ...(reload ? { key: reloadKey } : {}),
-  };
-
   return (
-    <div {...containerProps}>
+    <div
+      key={reload ? reloadKey : undefined}
+      className="border-y sm:border-x sm:border-y sm:rounded-xl p-4 min-h-[348px] bg-white dark:bg-[#0D0D0B] relative"
+    >
       {reload && (
         <Button
-          variant={"ghost"}
-          size={"sm"}
+          variant="ghost"
+          size="sm"
           className="absolute right-4 top-4 cursor-pointer"
           onClick={handleReload}
         >
