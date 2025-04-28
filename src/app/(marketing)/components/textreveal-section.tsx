@@ -4,18 +4,12 @@ import { useState } from "react";
 import Viewport from "@/components/ui/ViewPort";
 import { Button } from "@/components/animations/magnetic-button";
 import { TextReveal } from "@/components/animations/text-reveal";
-import { LoaderCircle } from "lucide-react";
 
 const TextRevealSection = () => {
   const [activeTab, setActiveTab] = useState("preview");
-  const [reloadKey, setReloadKey] = useState(0);
 
   const toggleTab = () => {
     setActiveTab((prevTab) => (prevTab === "preview" ? "code" : "preview"));
-  };
-
-  const handleReload = () => {
-    setReloadKey((prevKey) => prevKey + 1);
   };
 
   return (
@@ -44,17 +38,9 @@ const TextRevealSection = () => {
       </div>
 
       {activeTab === "preview" && (
-        <div className="grid grid-cols-1 sm:px-4 relative">
-          <Button
-            variant={"ghost"}
-            size={"sm"}
-            className="absolute right-6 top-2 cursor-pointer"
-            onClick={handleReload}
-          >
-            <LoaderCircle />
-          </Button>
-          <Viewport>
-            <div className="flex justify-center items-center min-h-full" key={reloadKey}>
+        <div className="grid grid-cols-1 sm:px-4">
+          <Viewport reload>
+            <div className="flex justify-center items-center min-h-full">
               <TextReveal
                 text="Become who you are 🔥"
                 className="font-medium text-lg"
