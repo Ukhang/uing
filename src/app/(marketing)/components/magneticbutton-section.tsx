@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Viewport from "@/components/ui/ViewPort";
 import { Button } from "@/components/animations/magnetic-button";
+import MagneticButtonMdx from "@/docs/magnetic-button.mdx";
 
 const MagneticButtonSection = () => {
   const [activeTab, setActiveTab] = useState("preview");
@@ -49,8 +50,8 @@ const MagneticButtonSection = () => {
       )}
 
       {activeTab === "code" && (
-        <div className="px-4">
-          <p className="text-custom-muted">Code coming soon...</p>
+        <div className="px-4 text-custom-primary">  
+          <MagneticButtonMdx/>
         </div>
       )}
     </section>
