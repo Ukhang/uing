@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { X, Plus } from "lucide-react";
 import { Button } from "@/components/animations/magnetic-button";
+import { cn } from "@/lib/utils";
 
 type Note = {
   id: number;
@@ -126,7 +127,10 @@ function StickyNote({
 
   return (
     <motion.div
-      className={`absolute shadow-lg rounded-md ${note.color} p-4 w-54 min-h-32 cursor-move flex flex-col text-sm text-black`}
+      className={cn(
+        "absolute shadow-lg rounded-md p-4 w-54 min-h-32 cursor-move flex flex-col text-sm text-black",
+        note.color
+      )}      
       style={{ x: note.x, y: note.y }}
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
