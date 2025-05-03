@@ -4,6 +4,7 @@ import MacModalSection from "./components/macmodal-section";
 import MagneticButtonSection from "./components/magneticbutton-section";
 import TextRevealSection from "./components/textreveal-section";
 import EmojiBurstSection from "./components/emojiburst-section";
+import StickyBoardSection from "./components/stickyboard-section";
 
 export default function Home() {
   return (
@@ -41,6 +42,7 @@ export default function Home() {
       <MacModalSection />
       <TextRevealSection />
       <EmojiBurstSection/>
+      <StickyBoardSection/>
     </div>
   );
 }
