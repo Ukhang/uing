@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-// Default album images
 const defaultAlbums = [
   "https://lastfm.freetls.fastly.net/i/u/300x300/2c4113a4cf750427dd390f8a3b2b8dc9.jpg",
   "https://lastfm.freetls.fastly.net/i/u/300x300/33ee3c8333bf4c0ea0baebd003813cca.jpg",
@@ -22,7 +21,6 @@ export default function CoverFlow({ albums = defaultAlbums }) {
           const offset = i - active;
           const isActive = offset === 0;
 
-          // Adjustments for animation and appearance
           const scale = isActive ? 1 : 0.85;
           const translateX = offset * 130;
           const rotate = offset * 10;
