@@ -5,6 +5,7 @@ import MagneticButtonSection from "./components/magneticbutton-section";
 import TextRevealSection from "./components/textreveal-section";
 import EmojiBurstSection from "./components/emojiburst-section";
 import StickyBoardSection from "./components/stickyboard-section";
+import CoverFlowSection from "./components/coverflow-section";
 
 export default function Home() {
   return (
@@ -43,6 +44,7 @@ export default function Home() {
       <TextRevealSection />
       <EmojiBurstSection/>
       <StickyBoardSection/>
+      <CoverFlowSection/>
     </div>
   );
 }
