@@ -20,7 +20,7 @@ const DynamicIslandSection = () => {
             Dynamic Island
           </h3>
           <p className="text-custom-muted">
-            A sleek, interactive UI inspired by iPhone 14 Pro's Dynamic Island.
+            A sleek, interactive UI inspired by iPhone 14 Pro&apos;s Dynamic Island.
             Tap to expand and reveal contextual info like calls or music with
             smooth spring animations.
           </p>
