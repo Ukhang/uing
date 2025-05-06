@@ -6,6 +6,7 @@ import TextRevealSection from "./components/textreveal-section";
 import EmojiBurstSection from "./components/emojiburst-section";
 import StickyBoardSection from "./components/stickyboard-section";
 import CoverFlowSection from "./components/coverflow-section";
+import DynamicIslandSection from "./components/dynamicisland-section";
 
 export default function Home() {
   return (
@@ -45,6 +46,7 @@ export default function Home() {
       <EmojiBurstSection/>
       <StickyBoardSection/>
       <CoverFlowSection/>
+      <DynamicIslandSection/>
     </div>
   );
 }
