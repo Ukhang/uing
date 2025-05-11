@@ -3,6 +3,7 @@
 import { Button } from "@/components/animations/magnetic-button";
 import React from "react";
 import { Github } from "lucide-react";
+import { ModeToggle } from "./mood-toggle";
 
 const Navbar = () => {
   const handleGitHubRedirect = () => {
@@ -12,6 +13,7 @@ const Navbar = () => {
   return (
     <header className="w-full lg:fixed top-0 left-0">
       <nav className="flex items-center justify-end p-4 gap-4">
+        <ModeToggle/>
         <Button
           magnetic
           size={"sm"}
